@@ -1,5 +1,6 @@
 node_modules/
 dist/
-.openai/local/
+.openai/
+tmp_sample.jpg
 *.log
 .DS_Store
