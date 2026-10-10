@@ -1,0 +1,75 @@
+/** Bundled original recipe. Quantities and timing are suggestions, not a live feed. */
+export const recipe = {
+  id: 'tomato-basil-pasta',
+  title: 'Tomato & basil pasta',
+  subtitle: 'A simple two-pan dinner, one clear step at a time.',
+  servings: 2,
+  totalMinutes: 25,
+  heroImage: '/images/hero-pasta.jpg',
+  ingredients: [
+    { quantity: '180 g', name: 'dried pasta' },
+    { quantity: '1 tbsp', name: 'olive oil' },
+    { quantity: '2 cloves', name: 'garlic, finely chopped' },
+    { quantity: '400 g', name: 'chopped tomatoes' },
+    { quantity: '1 small handful', name: 'fresh basil' },
+    { quantity: 'To taste', name: 'salt and black pepper' },
+  ],
+  timers: [
+    { id: 'pasta', label: 'Pasta', durationMs: 10 * 60 * 1000 },
+    { id: 'sauce', label: 'Sauce', durationMs: 6 * 60 * 1000 },
+  ],
+  steps: [
+    {
+      id: 'prepare',
+      title: 'Get everything ready',
+      instruction: 'Chop 2 garlic cloves. Tear a small handful of basil leaves.',
+      ingredients: ['2 garlic cloves', '1 small handful of basil'],
+      tip: 'Keep the ingredients and both pans within easy reach.',
+      image: '/images/step-1-prepare.jpg',
+    },
+    {
+      id: 'water',
+      title: 'Bring the water to a boil',
+      instruction: 'Fill a large pot with water. Add salt and bring it to a boil.',
+      ingredients: ['Water', 'Salt to taste'],
+      tip: 'Place a second pan nearby for the sauce.',
+      image: '/images/step-2-water.jpg',
+    },
+    {
+      id: 'pasta',
+      title: 'Start the pasta',
+      instruction: 'Add 180 g pasta to the boiling water. Stir, then start the Pasta timer.',
+      ingredients: ['180 g dried pasta'],
+      tip: '10 minutes is a guide. Follow your pasta pack and check for doneness.',
+      timerId: 'pasta',
+      image: '/images/step-3-pasta.jpg',
+    },
+    {
+      id: 'sauce',
+      title: 'Make the sauce',
+      instruction: 'Warm 1 tbsp oil. Soften the garlic, add 400 g tomatoes, then start the Sauce timer.',
+      ingredients: ['1 tbsp olive oil', 'Chopped garlic', '400 g chopped tomatoes'],
+      tip: 'Keep the heat gentle and stir occasionally while the pasta cooks.',
+      timerId: 'sauce',
+      image: '/images/step-4-sauce.jpg',
+    },
+    {
+      id: 'combine',
+      title: 'Bring it together',
+      instruction: 'When the pasta is ready, save a little cooking water. Drain and stir into the sauce.',
+      ingredients: ['Cooked pasta', 'Tomato sauce', 'A splash of pasta water'],
+      tip: 'Add a splash of saved water if the sauce is too thick.',
+      image: '/images/step-5-combine.jpg',
+    },
+    {
+      id: 'serve',
+      title: 'Finish and serve',
+      instruction: 'Stir in the basil. Season with salt and pepper, then serve warm.',
+      ingredients: ['Torn basil', 'Salt and black pepper to taste'],
+      tip: 'Turn off the heat on both pans. Your timers stay visible until acknowledged.',
+      image: '/images/step-6-serve.jpg',
+    },
+  ],
+};
+
+export default recipe;
