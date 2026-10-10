@@ -2,8 +2,8 @@
 
 A tablet-first cooking prototype for the **Messy Hands** design brief. Follow a six-step tomato basil pasta recipe with large controls, independent timers, saved progress, and optional voice navigation.
 
-- [Current live prototype](https://cookclear-kitchen.happylamp8.chatgpt.site)
-- [Case-study PDF](public/case-study.pdf)
+- [Current live prototype](https://cook-clear.netlify.app/)
+- [Complete submission PDF](https://cook-clear.netlify.app/case-study.pdf)
 
 ## Run locally
 
@@ -54,7 +54,7 @@ Netlify guidance: [Vite setup](https://docs.netlify.com/build/frameworks/framewo
 
 - `src/`: React interface, recipe content, session/timer logic, and browser feature hooks.
 - `public/images/`: Cooking photography.
-- `public/case-study.pdf`: Eight-page submission case study.
+- `public/case-study.pdf`: Complete 24-page submission with the case study, all six steps in tablet and phone layouts, timer states, completion, help, reset, verification, and clickable reviewer links.
 - `tests/`: Session and timer checks using Node's built-in test runner.
 
 Built with React 19 and Vite 8.
