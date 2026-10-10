@@ -61,3 +61,46 @@
 .cooking-shell .completion-visual{display:none}
 .cooking-shell .help-panel{position:fixed;z-index:10;top:96px;right:max(24px,calc((100vw - 1496px)/2));width:min(650px,calc(100vw - 48px));max-height:calc(100dvh - 125px);overflow:auto;margin:0;box-shadow:0 18px 55px #20362c29}
 }
+
+/* Fit the recipe overview to laptop and tablet landscapes without clipping controls. */
+@media(min-width:801px) and (orientation:landscape) and (min-height:540px){
+  .overview-shell{height:100svh;height:100dvh;display:flex;flex-direction:column}
+  .overview-shell .app-header{height:clamp(64px,10vh,88px);flex:none}
+  .overview-shell .overview{flex:1;min-height:0;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(30px,4vw,80px);padding:clamp(14px,3vh,32px) 0 clamp(12px,2vh,24px)}
+  .overview-shell .recipe-story{display:flex;flex-direction:column;min-height:0;min-width:0}
+  .overview-shell .recipe-story .eyebrow{flex:none;margin-bottom:clamp(10px,2vh,22px)}
+  .overview-shell .recipe-story h1{flex:none;font-size:clamp(48px,min(9vh,5.5vw),88px);margin-bottom:clamp(12px,2vh,22px)}
+  .overview-shell .recipe-description{flex:none;font-size:clamp(15px,2.3vh,19px);line-height:1.45;margin-bottom:clamp(10px,1.8vh,20px)}
+  .overview-shell .recipe-facts{flex:none}
+  .overview-shell .recipe-art{flex:1;min-height:0;height:auto;max-height:340px;margin-top:clamp(12px,2vh,20px)}
+  .overview-shell .prep-panel{min-width:0;min-height:0;padding-top:2px}
+  .overview-shell .prep-heading h2{font-size:clamp(28px,4vh,35px);margin:8px 0 6px}
+  .overview-shell .prep-heading p{font-size:13px;line-height:1.5;max-width:430px}
+  .overview-shell .ingredients{margin:clamp(12px,2.2vh,24px) 0 clamp(12px,2vh,20px)}
+  .overview-shell .ingredient{padding:clamp(6px,1.1vh,12px) 0;line-height:1.4}
+  .overview-shell .mode-control{padding:clamp(10px,1.6vh,15px) 16px;margin-bottom:clamp(12px,2vh,18px)}
+  .overview-shell .start-cooking{height:clamp(64px,9vh,74px);min-height:64px}
+  .overview-shell .start-note{margin:8px 0}
+  .overview-shell .app-footer{flex:none;padding:clamp(10px,1.6vh,16px) 0}
+  .overview-shell .help-panel{position:fixed;z-index:10;top:96px;right:max(24px,calc((100vw - 1496px)/2));width:min(650px,calc(100vw - 48px));max-height:calc(100dvh - 125px);overflow:auto;margin:0;box-shadow:0 18px 55px #20362c29}
+  .overview-shell .capability-note{flex:none;margin-top:8px}
+  .overview-shell .overview-timer-alert{flex:none;margin-top:10px;padding:8px 14px;gap:12px}
+  .overview-shell .overview-timer-alert .button{min-height:48px}
+  .overview-shell .overview-timer-alert strong{font-size:16px}
+}
+@media(min-width:801px) and (orientation:landscape) and (min-height:540px) and (max-height:620px){
+  .overview-shell .overview{padding:12px 0 10px}
+  .overview-shell .prep-heading p,.overview-shell .start-note,.overview-shell .art-note{display:none}
+  .overview-shell .ingredients{margin:8px 0}
+  .overview-shell .section-label{margin-bottom:6px}
+  .overview-shell .ingredient{padding:4px 0;font-size:12px}
+  .overview-shell .mode-control{padding:8px 14px;margin-bottom:8px}
+  .overview-shell .app-footer{padding:10px 0}
+  .overview-shell:has(.overview-timer-alert) .ingredients,.overview-shell:has(.overview-timer-alert) .mode-control{margin-bottom:4px}
+}
+@media(min-width:801px) and (orientation:landscape) and (min-height:540px) and (max-height:700px){
+  .overview-shell:has(.reset-overview) .prep-heading p,.overview-shell:has(.reset-overview) .start-note{display:none}
+}
+@media(min-width:801px) and (orientation:landscape) and (min-height:540px) and (max-height:820px){
+  .overview-shell:has(.overview-timer-alert) .prep-heading,.overview-shell:has(.overview-timer-alert) .start-note{display:none}
+}

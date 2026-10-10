@@ -149,7 +149,7 @@ export default function App() {
   };
   const acknowledge = timerId => { dispatch({ type: 'ACK_TIMER', timerId, now: Date.now() }); setAnnouncement(`${session.timers[timerId].label} timer acknowledged.`); };
 
-  return <div className={`app-shell ${view === 'cook' ? 'cooking-shell' : ''}`}>
+  return <div className={`app-shell ${view === 'cook' ? 'cooking-shell' : 'overview-shell'}`}>
     <header className="app-header">
       <button className="brand" onClick={() => setView('overview')} aria-label="CookClear recipe overview"><span className="brand-symbol"><Icon name="bowl" size={25}/></span><span>cook<span className="brand-light">clear</span><span className="brand-period">.</span></span></button>
       <div className="header-center">{session.mode === 'demo' ? <span className="demo-badge"><Icon name="spark" size={14}/>QUICK DEMO · SHORTER TIMERS</span> : <span className="mode-badge"><i/>YOUR KITCHEN, A LITTLE CALMER</span>}</div>
